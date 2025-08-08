@@ -161,3 +161,37 @@ input#codeInput:focus{
   color:var(--muted);
   font-size:13px;
 }
+
+.repo-link {
+  margin-top: 10px;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(43,138,62,0.15);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.github-btn:hover {
+  box-shadow: 0 6px 14px rgba(43,138,62,0.25);
+  transform: translateY(-1px);
+}
+
+.github-btn:active {
+  transform: translateY(1px);
+}
+
+.github-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* makes icon white */
+}
+
