@@ -4,7 +4,7 @@
 
 <div align="center">
   <!-- Banner -->
-  <img width="1197" height="119" alt="Debtector" src="https://github.com/user-attachments/assets/df8e7f86-e047-4d7d-b585-19586c3c764b"/>
+  <img width="1197" height="119" alt="DBTCTOR" src="https://github.com/user-attachments/assets/d5cefadb-8887-4e6a-9f3b-fa7403690bd0" />
 
   <!-- Divider -->
   ---
