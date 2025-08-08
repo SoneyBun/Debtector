@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Debtector — Debt Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+
+<header class="hero">
+  <div class="logo">
+    <img src="DebtectorLogo.png" alt="Debtector Logo" class="logo-img">
+  </div>
+  <h1>Debtector</h1>
+  <p class="tag">Calculate current debt with 7% monthly interest</p>
+</header>
+
+    <section class="card">
+      <label for="codeInput" class="label">Person Code</label>
+      <div class="row">
+        <input id="codeInput" placeholder="S0001" autocomplete="off" />
+        <button id="calculateBtn" class="btn">Calculate</button>
+      </div>
+
+      <div id="output" class="output" aria-live="polite"></div>
+    </section>
+
+    <footer class="foot">
+      <small>Debtector • 7% monthly interest (compounded monthly)</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
