@@ -13,9 +13,23 @@
   <h3>How To Use</h3>
 
   script.js contains debtdata, in which you can insert new people and add new debts.
-  
-  <img width="742" height="305" alt="image" src="https://github.com/user-attachments/assets/eb4f9f3d-d342-46d6-9d0d-37a25772f684" />
-
-  <!-- Divider -->
-  ---
 </div>
+
+<!-- Code -->
+ ```js
+  const debtData = {
+  "A0001": [
+    { amount: 5, date: new Date(2025, 2, 20) },
+    { amount: 15, date: new Date(2025, 5, 7) }
+  ],
+  "L0001": [
+    { amount: 19.75, date: new Date(2023, 8, 17) },
+    { amount: 4, date: new Date(2025, 6, 1) }
+  ],
+  "N0001": [
+    { amount: 12.07, date: new Date(2025, 7, 5) }
+  ]
+};
+```
+<!-- Divider -->
+---
