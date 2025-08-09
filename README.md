@@ -12,7 +12,7 @@
   <!-- Instructions -->
   <h3>How To Use</h3>
 
-  script.js contains debtdata, in which you can insert new people and add new debts.
+  script.js contains debtData, in which you can insert new people and add new debts.
 </div>
 
 <!-- Code -->
