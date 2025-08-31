@@ -12,7 +12,7 @@
   <!-- Instructions -->
   <h3>How To Use</h3>
 
-  script.js contains debtData, in which you can insert new people and add new debts.
+  `script.js` contains debtData, in which you can insert new people and add new debts.
 </div>
 
 <!-- Code -->
@@ -33,3 +33,9 @@
 ```
 <!-- Divider -->
 ---
+
+<!-- Buttons -->
+<div align="center">
+  <a href="script.js" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/script-Debtector?style=for-the-badge&logo=JavaScript&logoColor=%23FFFFFF&color=%23348543"></a>
+  
+</div>
