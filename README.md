@@ -41,7 +41,7 @@
   <a href="style.css" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/style-Debtector?style=for-the-badge&logo=CSS&logoColor=%23FFFFFF&color=%23348543"></a>
 
   
-  <a href="soneybun.github.io/Debtector/" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/deployment-Debtector?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF&color=%23348543"></a>
+  <a href="https://soneybun.github.io/Debtector" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/deployment-Debtector?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF&color=%23348543"></a>
   <a href="LICENSE" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/mit%20%20license-Debtector?style=for-the-badge&logo=GitHub&logoColor=%23FFFFFF&color=%23348543">
 </a>
 </div>
