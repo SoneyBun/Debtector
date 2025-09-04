@@ -9,29 +9,9 @@
   <!-- Divider -->
   ---
 
-  <!-- Instructions -->
-  <h3>How To Use</h3>
+  <!-- Buttons -->
+  <a href="Documentation/English.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/English-Debtector?style=for-the-badge&logo=GitHub&color=%23348543"></a>
+  <a href="Documentation/French.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Fran%C3%A7ais-Debtector?style=for-the-badge&logo=GitHub&color=%23348543"></a>
+  
 
-  `script.js` contains debtData, in which you can insert new people and add new debts.
 </div>
-
-<!-- Code -->
- ```js
-  const debtData = {
-  "A0001": [
-    { amount: 5, date: new Date(2025, 2, 20) },
-    { amount: 15, date: new Date(2025, 5, 7) }
-  ],
-  "L0001": [
-    { amount: 19.75, date: new Date(2023, 8, 17) },
-    { amount: 4, date: new Date(2025, 6, 1) }
-  ],
-  "N0001": [
-    { amount: 12.07, date: new Date(2025, 7, 5) }
-  ]
-};
-```
-<!-- Divider -->
----
-
-
