@@ -11,7 +11,7 @@
   <!-- Instructions -->
   <h3>How To Use</h3>
 
-  <a href="script.js" target="_blank">`script.js`</a> contains debtData, in which you can insert new people and add new debts.
+  <a href="../script.js" target="_blank">`script.js`</a> contains debtData, in which you can insert new people and add new debts.
 </div>
 
 <!-- Code -->
