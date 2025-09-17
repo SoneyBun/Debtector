@@ -195,3 +195,12 @@ input#codeInput:focus{
   filter: brightness(0) invert(1); /* makes icon white */
 }
 
+/* clickable Debtector title */
+.clickable {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clickable:hover {
+  color: var(--accent);
+}
