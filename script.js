@@ -49,6 +49,7 @@ function calculateDebt(code) {
 const input = document.getElementById("codeInput");
 const btn = document.getElementById("calculateBtn");
 const output = document.getElementById("output");
+const homeBtn = document.getElementById("homeBtn");
 
 function formatCurrency(n) {
   return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits:2 });
@@ -80,13 +81,17 @@ function renderResult(code) {
   output.appendChild(tot);
 }
 
-/* Show welcome message instead of default data */
-input.value = "";
-output.innerHTML = `
-  <p>Welcome to <strong>Debtector</strong> — enter a person code above to calculate their total debt with 7% monthly compounded interest.</p>
-  <p>Person Codes include the first letter of the person's code and a number in numerical order.</p>
-  <p>Example: <code>S0001</code></p>
-`;
+function showWelcome() {
+  input.value = "";
+  output.innerHTML = `
+    <p>Welcome to <strong>Debtector</strong> — enter a person code above to calculate their total debt with 7% monthly compounded interest.</p>
+    <p>Person Codes include the first letter of the person's code and a number in numerical order.</p>
+    <p>Example: <code>S0001</code></p>
+  `;
+}
+
+/* Show welcome message on load */
+showWelcome();
 
 btn.addEventListener("click", () => {
   const code = input.value.trim().toUpperCase();
@@ -102,3 +107,5 @@ input.addEventListener("keydown", (e) => {
     btn.click();
   }
 });
+
+homeBtn.addEventListener("click", showWelcome);
