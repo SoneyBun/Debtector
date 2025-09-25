@@ -1,0 +1,206 @@
+:root{
+  --bg: #f6fbf6;
+  --card: #ffffff;
+  --accent: #2b8a3e;     /* green */
+  --accent-2: #76c37f;   /* lighter green */
+  --muted: #6b6b6b;
+  --glass: rgba(43,138,62,0.06);
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(15,15,15,0.06);
+  --mono: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, var(--bg), #f0faf0 60%);
+  font-family: var(--mono);
+  -webkit-font-smoothing:antialiased;
+  color:#0f1720;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px;
+}
+
+.app{
+  width:100%;
+  max-width:760px;
+}
+
+.hero{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:18px;
+}
+
+.logo {
+  height: 64px;
+  width: 64px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 6px;
+}
+
+.logo-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.hero h1{
+  margin:0;
+  font-size:28px;
+  letter-spacing: -0.6px;
+}
+
+.tag{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(43,138,62,0.06);
+}
+
+.label{
+  display:block;
+  font-weight:600;
+  margin-bottom:8px;
+  color: #0b2b12;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+input#codeInput{
+  flex:1;
+  padding:12px 14px;
+  font-size:16px;
+  border-radius:10px;
+  border:1px solid #e6efe6;
+  background:var(--glass);
+  outline:none;
+  transition:box-shadow .15s, transform .08s;
+}
+
+input#codeInput:focus{
+  box-shadow:0 6px 18px rgba(43,138,62,0.12);
+  transform:translateY(-1px);
+  border-color:var(--accent);
+}
+
+.btn{
+  background:linear-gradient(180deg,var(--accent),var(--accent-2));
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow:0 6px 18px rgba(43,138,62,0.12);
+}
+
+.btn:active{transform:translateY(1px)}
+.extra{color:var(--muted); margin-top:10px; font-size:13px}
+
+.output{
+  margin-top:18px;
+  padding:14px;
+  border-radius:10px;
+  background:linear-gradient(180deg, rgba(43,138,62,0.025), rgba(0,0,0,0.01));
+  min-height:64px;
+  display:block;
+  font-size:15px;
+  color:#07320f;
+  border:1px solid rgba(11,43,18,0.04);
+}
+
+.output p {
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.event{
+  padding:8px 10px;
+  border-radius:8px;
+  background:white;
+  margin-bottom:8px;
+  box-shadow:0 6px 18px rgba(11,43,18,0.02);
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  align-items:center;
+}
+
+.event small{color:var(--muted)}
+.total{
+  margin-top:8px;
+  font-weight:800;
+  font-size:18px;
+  color:var(--accent);
+  text-align:right;
+}
+
+.foot{
+  margin-top:18px;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.repo-link {
+  margin-top: 10px;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(43,138,62,0.15);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.github-btn:hover {
+  box-shadow: 0 6px 14px rgba(43,138,62,0.25);
+  transform: translateY(-1px);
+}
+
+.github-btn:active {
+  transform: translateY(1px);
+}
+
+.github-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* makes icon white */
+}
+
+/* clickable Debtector title */
+.clickable {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.clickable:hover {
+  color: var(--accent);
+}
