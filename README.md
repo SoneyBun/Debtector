@@ -1,7 +1,7 @@
 <!-- Alignment -->
 <div align="center">
   <!-- Banner -->
-  <img width="1197" height="119" alt="DBTCTOR" src="https://github.com/user-attachments/assets/d5cefadb-8887-4e6a-9f3b-fa7403690bd0" />
+  <img width="1197" height="119" alt="DBTCTOR" src="https://github.com/user-attachments/assets/851084e9-fae3-4aaa-909e-a10d7b004bc3" />
 
   <!-- Divider -->
   ---
