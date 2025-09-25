@@ -27,3 +27,10 @@ const debtData = {
 ```
 <!-- Divider -->
 ---
+
+<!-- Alignment -->
+<div align="center">
+  <!-- Fork Button -->
+  <a href="https://github.com/Debtector/Debtector" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Fork-Debtector?style=for-the-badge&logo=GitHub&color=%23348543"></a>
+</div>
+
