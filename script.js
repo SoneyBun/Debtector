@@ -6,12 +6,16 @@ function makeDate(year, month, day) {
 
 // Configure debt data here
 const debtData = {
-  "J0001": [
-    { amount: 42, date: makeDate(2019, 12, 2) }
+  "A0001": [
+    { amount: 5, date: makeDate(2025, 4, 15) },
+    { amount: 15, date: makeDate(2025, 6, 13) }
   ],
-  "J0002": [
-    { amount: 6, date: makeDate(2025, 4, 1) },
-    { amount: 7, date: makeDate(2025, 4, 7) }
+  "L0001": [
+    { amount: 19.75, date: makeDate(2023, 10, 7) },
+    { amount: 4, date: makeDate(2025, 7, 1) }
+  ],
+  "N0001": [
+    { amount: 12.07, date: makeDate(2025, 8, 5) }
   ]
 };
 
