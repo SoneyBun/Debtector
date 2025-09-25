@@ -17,7 +17,7 @@
 // Configure debt data here
 const debtData = {
   "J0001": [
-    { amount: 42, date: makeDate(1989, 4, 21) }
+    { amount: 42, date: makeDate(2003, 12, 2) }
   ],
   "J0002": [
     { amount: 6, date: makeDate(2025, 4, 1) },
