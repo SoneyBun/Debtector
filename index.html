@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Debtector — Debt Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="png" href="DebtectorLogo.png">
+</head>
+<body>
+  <main class="app">
+
+<header class="hero">
+  <div class="logo">
+    <img src="DebtectorLogo.png" alt="Debtector Logo" class="logo-img">
+  </div>
+  <h1 id="homeBtn" class="clickable">Debtector</h1>
+  <p class="tag">Calculate current debt with 7% monthly interest</p>
+</header>
+
+    <section class="card">
+      <label for="codeInput" class="label">Person Code</label>
+      <div class="row">
+        <input id="codeInput" placeholder="e.g., A0001" autocomplete="off" />
+        <button id="calculateBtn" class="btn">Calculate</button>
+      </div>
+
+      <div id="output" class="output" aria-live="polite"></div>
+    </section>
+
+    <footer class="foot">
+      <small>Debtector • 7% monthly interest (compounded monthly)</small>
+      <div class="repo-link">
+        <a href="https://github.com/Debtector/Debtector" target="_blank" rel="noopener" class="github-btn">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Logo" class="github-icon">
+          View the GitHub Repository
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
