@@ -8,8 +8,7 @@ function makeDate(year, month, day) {
 const debtData = {
   "A0001": [
     { amount: 5, date: makeDate(2025, 4, 15) },
-    { amount: 15, date: makeDate(2025, 6, 13) },
-    { amount: 4, date: makeDate(2025, 9, 26) }
+    { amount: 15, date: makeDate(2025, 6, 13) }
   ],
   "L0001": [
     { amount: 19.75, date: makeDate(2023, 10, 7) },
