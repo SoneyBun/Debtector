@@ -25,6 +25,23 @@ const debtData = {
   ]
 };
 ```
+
+<!-- Alignment -->
+<div align="center">
+  
+  <a href="./index.html" target="_blank">`index.html`</a> includes This Repo Link, where you can replace the repository link with that of your fork.
+  
+</div>
+
+<!-- Code -->
+```html
+<!-- This Repo Link -->
+<a href="https://github.com/Debtector/Debtector" target="_blank" rel="noopener" class="github-btn">
+  <img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub Logo" class="repo-icon">
+  This GitHub Repository
+</a>
+```
+
 <!-- Divider -->
 ---
 
