@@ -189,13 +189,18 @@ input#codeInput:focus{
   transform: translateY(1px);
 }
 
-.github-icon {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) invert(1); /* makes icon white */
+.repo-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
-/* clickable Debtector title */
+.debtector-icon {
+  filter: brightness(0) invert(1);
+  transform: scale(1.25);
+  transform-origin: center;
+}
+
 .clickable {
   cursor: pointer;
   transition: color 0.2s ease;
