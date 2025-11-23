@@ -11,12 +11,12 @@ const debtData = {
     { amount: 15, date: makeDate(2025, 6, 13) }
   ],
   "L0001": [
-    { amount: 19.75, date: makeDate(2025, 10, 7) },
+    { amount: 19.75, date: makeDate(2023, 10, 7) },
     { amount: 4, date: makeDate(2025, 7, 1) },
     { amount: 20, date: makeDate(2025, 11, 20) }
   ],
   "N0001": [
-    { amount: 12.07, date: makeDate(2024, 8, 5) }
+    { amount: 12.07, date: makeDate(2025, 8, 5) }
   ]
 };
 
