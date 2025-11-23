@@ -6,24 +6,23 @@ function makeDate(year, month, day) {
 
 // Configure debt data here
 const debtData = {
-  "J0001": [
-    { amount: 42, date: makeDate(2019, 12, 2) }
+  "A0001": [
+    { amount: 5, date: makeDate(2025, 4, 15) }
   ],
-  "J0002": [
-    { amount: 6, date: makeDate(2025, 4, 1) },
-    { amount: 7, date: makeDate(2025, 4, 7) }
+  "L0001": [
+    { amount: 19.75, date: makeDate(2025, 10, 7) },
+    { amount: 4, date: makeDate(2025, 7, 1) },
+    { amount: 20, date: makeDate(2025, 11, 20) }
   ],
-  "J0003": [
-    { amount: 20, date: makeDate(2024, 6, 15) },
-    { amount: 15, date: makeDate(2024, 9, 3) }
+  "N0001": [
+    { amount: 12.07, date: makeDate(2024, 8, 5) }
   ]
 };
 
 // Configure deduction data here
 const deductionsData = {
-  "J0003": [
-    { amount: 12, label: "Returned Item Deduction" },
-    { amount: 3, label: "System Correction" }
+  "L0001": [
+    { amount: 4, label: "Provided Loaner" },
   ]
 };
 
