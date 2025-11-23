@@ -12,6 +12,18 @@ const debtData = {
   "J0002": [
     { amount: 6, date: makeDate(2025, 4, 1) },
     { amount: 7, date: makeDate(2025, 4, 7) }
+  ],
+  "J0003": [
+    { amount: 20, date: makeDate(2024, 6, 15) },
+    { amount: 15, date: makeDate(2024, 9, 3) }
+  ]
+};
+
+// Configure deduction data here
+const deductionsData = {
+  "J0003": [
+    { amount: 12, label: "Returned Item Deduction" },
+    { amount: 3, label: "System Correction" }
   ]
 };
 
@@ -25,10 +37,13 @@ function monthsBetween(fromDate, toDate) {
 
 function calculateDebt(code) {
   const events = debtData[code];
+  const deductions = deductionsData[code] || [];
+
   if (!events) return null;
 
   const now = new Date();
   let total = 0;
+
   const breakdown = events.map(ev => {
     const months = monthsBetween(ev.date, now);
     const compounded = ev.amount * Math.pow(1 + monthlyInterest, months);
@@ -41,7 +56,16 @@ function calculateDebt(code) {
     };
   });
 
-  return { breakdown, total };
+  // Subtract deductions
+  const deductionBreakdown = deductions.map(d => {
+    total -= d.amount;
+    return {
+      label: d.label,
+      amount: d.amount
+    };
+  });
+
+  return { breakdown, deductionBreakdown, total };
 }
 
 /* UI wiring */
@@ -51,29 +75,66 @@ const output = document.getElementById("output");
 const homeBtn = document.getElementById("homeBtn");
 
 function formatCurrency(n) {
-  return n.toLocaleString(undefined, { style: "currency", currency: "USD", maximumFractionDigits:2 });
+  return n.toLocaleString(undefined, {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 2
+  });
 }
 
 function renderResult(code) {
   const res = calculateDebt(code);
   output.innerHTML = "";
+
   if (!res) {
     output.textContent = `No data found for "${code}".`;
     return;
   }
 
+  // Debt events
   res.breakdown.forEach(ev => {
     const evDiv = document.createElement("div");
     evDiv.className = "event";
+
     const left = document.createElement("div");
-    left.innerHTML = `<strong>${formatCurrency(ev.original)}</strong><br><small>${ev.date.toLocaleString(undefined,{month:'long', year:'numeric'})}</small>`;
+    left.innerHTML = `
+      <strong>${formatCurrency(ev.original)}</strong><br>
+      <small>${ev.date.toLocaleString(undefined, { month: 'long', year: 'numeric' })}</small>
+    `;
+
     const right = document.createElement("div");
-    right.innerHTML = `<small>${ev.months} month${ev.months===1?"":"s"} compounded</small><br><strong>${formatCurrency(ev.compounded)}</strong>`;
+    right.innerHTML = `
+      <small>${ev.months} month${ev.months === 1 ? "" : "s"} compounded</small><br>
+      <strong>${formatCurrency(ev.compounded)}</strong>
+    `;
+
     evDiv.appendChild(left);
     evDiv.appendChild(right);
     output.appendChild(evDiv);
   });
 
+  // Deductions
+  if (res.deductionBreakdown.length > 0) {
+    const header = document.createElement("div");
+    header.innerHTML = "<strong>Deductions</strong>";
+    header.style.margin = "12px 0 6px";
+    output.appendChild(header);
+
+    res.deductionBreakdown.forEach(d => {
+      const dedDiv = document.createElement("div");
+      dedDiv.className = "event";
+      dedDiv.style.background = "#ffecec";
+
+      dedDiv.innerHTML = `
+        <div><strong>${d.label}</strong></div>
+        <div><strong>- ${formatCurrency(d.amount)}</strong></div>
+      `;
+
+      output.appendChild(dedDiv);
+    });
+  }
+
+  // Total
   const tot = document.createElement("div");
   tot.className = "total";
   tot.textContent = `Total Debt: ${formatCurrency(res.total)}`;
@@ -89,7 +150,6 @@ function showWelcome() {
   `;
 }
 
-/* Show welcome message on load */
 showWelcome();
 
 btn.addEventListener("click", () => {
@@ -101,10 +161,8 @@ btn.addEventListener("click", () => {
   renderResult(code);
 });
 
-input.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    btn.click();
-  }
+input.addEventListener("keydown", e => {
+  if (e.key === "Enter") btn.click();
 });
 
 homeBtn.addEventListener("click", showWelcome);
