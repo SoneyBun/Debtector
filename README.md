@@ -22,6 +22,28 @@ const debtData = {
   "J0002": [
     { amount: 6, date: makeDate(2025, 4, 1) },
     { amount: 7, date: makeDate(2025, 4, 7) }
+  ],
+  "J0003": [
+    { amount: 20, date: makeDate(2024, 6, 15) },
+    { amount: 15, date: makeDate(2024, 9, 3) }
+  ]
+};
+```
+
+<!-- Alignment -->
+<div align="center">
+  
+  In order to use deductions,  you can insert deductions in here. Make sure to use the same person code.
+  
+</div>
+
+<!-- Code -->
+```js
+// Configure deduction data here
+const deductionsData = {
+  "J0003": [
+    { amount: 12, label: "Returned Item Deduction" },
+    { amount: 3, label: "System Correction" }
   ]
 };
 ```
