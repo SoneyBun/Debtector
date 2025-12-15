@@ -24,7 +24,8 @@ const debtData = {
 // Configure deduction data here
 const deductionsData = {
   "L0001": [
-    { amount: 4, label: "Provided Loaner" }
+    { amount: 4, label: "Provided loaner" },
+    { amount: 4, label: "Paid off the amount before interest." }
   ]
 };
 
